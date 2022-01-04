@@ -15,6 +15,10 @@ class CSLinkedList:
       if node.next == self.head:
         break
       node = node.next
+  
+  def __str__(self):
+    csll = [str(node.value) for node in self]
+    return " ".join(csll)
 
   def createCSLL(self, value):
     newNode = Node(value)
@@ -137,9 +141,11 @@ circularSinglyLinkedList.insertCSLL(44,5)
 # circularSinglyLinkedList.traverseCSLL()
 # print(circularSinglyLinkedList.searchNode(444))
 
+print(circularSinglyLinkedList)
+
 print([node.value for node in circularSinglyLinkedList])
 
 # circularSinglyLinkedList.deleteNode(0)
-circularSinglyLinkedList.deleteCSLL()
+# circularSinglyLinkedList.deleteCSLL()
 
-print([node.value for node in circularSinglyLinkedList])
+# print([node.value for node in circularSinglyLinkedList])
