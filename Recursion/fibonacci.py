@@ -6,7 +6,11 @@ def fibonacciNumber(n):
     return fibonacciNumber(n-1) + fibonacciNumber(n-2)
 
 
-print(fibonacciNumber(-6))
-print(fibonacciNumber(0))
-print(fibonacciNumber(6))
-print(fibonacciNumber(20))
+# print(fibonacciNumber(-6))
+# print(fibonacciNumber(0))
+# print(fibonacciNumber(6))
+# print(fibonacciNumber(20))
+print(fibonacciNumber(4))
+print(fibonacciNumber(10))
+print(fibonacciNumber(28))
+print(fibonacciNumber(35))
