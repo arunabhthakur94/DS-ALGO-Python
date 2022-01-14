@@ -7,10 +7,10 @@ class Node:
     self.prev = None
 
   def __str__(self):
-    return str(self.value)
+      return str(self.value)
 
 class LinkedList:
-  def __init__(self, values = None):
+  def __str__(self, values = None):
     self.head = None
     self.tail = None
 
@@ -19,27 +19,27 @@ class LinkedList:
     while node:
       yield node
       node = node.next
-
-  def __str__(self):
-    arr = [str(node.value) for node in self]
-    return ' '.join(arr)
+  
+  def __str__(self) -> str:
+      values = [str(x.value) for x in self]
+      return ' -> '.join(values)
 
   def __len__(self):
-    length = 0
+    count = 0
     node = self.head
     while node:
-      length += 1
+      count += 1
       node = node.next
-    return length
+    return count
 
   def add(self, value):
-    node = Node(value)
+    newNode = Node(value)
     if self.head is None:
-      self.head = node
-      self.tail = node
+      self.head = newNode
+      self.tail = newNode
     else:
-      self.tail.next = node
-      self.tail = node
+      self.tail.next = newNode
+      self.tail = newNode
     return self.tail
 
   def generate(self, n, min_value, max_value):
@@ -48,9 +48,9 @@ class LinkedList:
     for i in range(n):
       self.add(randint(min_value, max_value))
     return self
+      
 
-
-# ll = LinkedList()
-# print(ll.generate(10, 10, 99))
-# print(len(ll))
-# print(ll)
+# customLL = LinkedList()
+# customLL.generate(10, 0, 99)
+# print(customLL)
+# print(len(customLL))
