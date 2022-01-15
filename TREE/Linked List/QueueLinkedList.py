@@ -45,11 +45,13 @@ class Queue:
     if self.isEmpty():
       return "Queue is Empty"
     else:
+      temp = self.List.head
       if self.List.head == self.List.tail:
         self.List.head = None
         self.List.tail = None
       else:
         self.List.head = self.List.head.next
+      return temp
 
   def peek(self):
     if self.isEmpty():
