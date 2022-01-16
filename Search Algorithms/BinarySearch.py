@@ -1,5 +1,5 @@
 import math
-
+# TC: O(logn) SC: O(1)
 def binarySearch(arr, value):
   start = 0
   end = len(arr)-1
